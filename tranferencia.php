@@ -51,7 +51,7 @@ if(isset($_SESSION['usuario'])){
         </div>
 
 
-        <form action="php/registrar_paquete.php" method="POST" name="registration">
+        <form action="php/tranferencia.php" method="POST" name="tranferir">
 
                 <div class="row">
                         <div class="col-md-12 ">

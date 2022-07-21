@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-07-2022 a las 04:00:30
+-- Tiempo de generación: 21-07-2022 a las 04:20:32
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.28
 
@@ -53,6 +53,7 @@ INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `usuario`, `cedula`, `direcc
 
 CREATE TABLE `solicitudes_prestamos` (
   `id` int(11) NOT NULL,
+  `id_cliente` int(11) NOT NULL,
   `nombres` varchar(100) NOT NULL,
   `apellidos` varchar(100) NOT NULL,
   `cedula` varchar(11) NOT NULL,
@@ -79,6 +80,7 @@ CREATE TABLE `solicitudes_prestamos` (
 
 CREATE TABLE `solicitudes_tarjetas` (
   `id` int(11) NOT NULL,
+  `id_cliente` int(11) NOT NULL,
   `nombres` varchar(100) NOT NULL,
   `apellidos` varchar(100) NOT NULL,
   `cedula` varchar(11) NOT NULL,
@@ -100,6 +102,7 @@ CREATE TABLE `solicitudes_tarjetas` (
 
 CREATE TABLE `transferencia` (
   `id` int(11) NOT NULL,
+  `id_cliente` int(11) NOT NULL,
   `cuenta_origen` varchar(100) NOT NULL,
   `cuenta_destino` varchar(100) NOT NULL,
   `monto` int(11) NOT NULL,
@@ -132,6 +135,12 @@ ALTER TABLE `solicitudes_tarjetas`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `transferencia`
+--
+ALTER TABLE `transferencia`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -152,6 +161,12 @@ ALTER TABLE `solicitudes_prestamos`
 --
 ALTER TABLE `solicitudes_tarjetas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `transferencia`
+--
+ALTER TABLE `transferencia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
