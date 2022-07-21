@@ -99,7 +99,7 @@ header .contenedor {
     display: none;
   }
   .row {
-    width: 50%;
+    width: 100%;
   }
 }
 .contenedor2 {
@@ -195,7 +195,7 @@ form {
 .row {
   margin: auto;
   margin-top: 80px;
-  width: 85%;
+  width: 100%;
 }
 table {
   width: 100%;
