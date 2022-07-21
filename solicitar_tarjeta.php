@@ -51,7 +51,7 @@ if(isset($_SESSION['usuario'])){
         </div>
 
 
-        <form action="php/registrar_paquete.php" method="POST" name="registration">
+        <form action="php/solicitar_tarjeta.php" method="POST" name="solicitar_tarjeta">
 
                 <div class="row">
                         <div class="col-md-6">
