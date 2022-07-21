@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-07-2022 a las 04:20:32
+-- Tiempo de generación: 21-07-2022 a las 05:12:16
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.28
 
@@ -57,9 +57,8 @@ CREATE TABLE `solicitudes_prestamos` (
   `nombres` varchar(100) NOT NULL,
   `apellidos` varchar(100) NOT NULL,
   `cedula` varchar(11) NOT NULL,
-  `pasaporte` int(11) DEFAULT NULL,
-  `tipo_tarjeta` varchar(100) NOT NULL,
-  `telefono_oficiona` varchar(10) DEFAULT NULL,
+  `pasaporte` varchar(100) DEFAULT NULL,
+  `telefono_oficina` varchar(10) DEFAULT NULL,
   `telefono_residencial` varchar(10) DEFAULT NULL,
   `telefono_movil` varchar(10) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -84,13 +83,13 @@ CREATE TABLE `solicitudes_tarjetas` (
   `nombres` varchar(100) NOT NULL,
   `apellidos` varchar(100) NOT NULL,
   `cedula` varchar(11) NOT NULL,
-  `pasaporte` int(11) DEFAULT NULL,
+  `pasaporte` varchar(100) DEFAULT NULL,
   `tipo_tarjeta` varchar(100) NOT NULL,
-  `telefono_oficiona` varchar(10) DEFAULT NULL,
+  `telefono_oficina` varchar(10) DEFAULT NULL,
   `telefono_residencial` varchar(10) DEFAULT NULL,
   `telefono_movil` varchar(10) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `direccion_residencia` varchar(200) NOT NULL,
+  `direccion_residencial` varchar(200) NOT NULL,
   `estado` varchar(1) NOT NULL DEFAULT 'A'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -154,13 +153,13 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `solicitudes_prestamos`
 --
 ALTER TABLE `solicitudes_prestamos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `solicitudes_tarjetas`
 --
 ALTER TABLE `solicitudes_tarjetas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `transferencia`

@@ -51,7 +51,7 @@ if(isset($_SESSION['usuario'])){
         </div>
 
 
-        <form action="php/registrar_paquete.php" method="POST" name="registration">
+        <form action="php/solicitar_prestamo.php" method="POST" name="solicitar_prestamo">
 
                 <div class="row">
                         <div class="col-md-12 ">
@@ -92,7 +92,7 @@ if(isset($_SESSION['usuario'])){
                         <div class="col-md-6">
                                 <div class="form-group">
                                         <label for="exampleInputEmail1"><b>Teléfono Oficina</b></label>
-                                        <input type="text" name="telefono_oficina" class="form-control"
+                                        <input type="number" name="telefono_oficina" class="form-control"
                                                 id="telefono_oficina" placeholder="Teléfono Oficina">
                                 </div>
                         </div>
@@ -100,7 +100,7 @@ if(isset($_SESSION['usuario'])){
                                 <div class="form-group">
                                         <label for="exampleInputEmail1"><b>Teléfono Residencial</b></label>
 
-                                        <input type="text" name="telefono_residencial" maxlength="10"
+                                        <input type="number" name="telefono_residencial" maxlength="10"
                                                 class="form-control" id="telefono_residencial"
                                                 placeholder="Teléfono Residencial">
                                 </div>
@@ -140,7 +140,7 @@ if(isset($_SESSION['usuario'])){
                                 <div class="form-group">
                                         <label for="exampleInputEmail1"><b>(*) Ingresos Mensuales</b></label>
 
-                                        <input type="text" name="ingresos_mensuales" class="form-control"
+                                        <input type="number" name="ingresos_mensuales" class="form-control"
                                                 id="ingresos_mensuales" placeholder="Ingresos Mensuales" required>
                                 </div>
                         </div>
