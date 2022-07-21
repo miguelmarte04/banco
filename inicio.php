@@ -39,8 +39,8 @@ if(isset($_SESSION['usuario'])){
                         <div>
 
                                 <br>
-                                <a href="paquetes_registrados.php">
-                                        <h2>Realizar Pagos</h2>
+                                <a href="tranferencia.php">
+                                        <h2>Realizar Transferencia</h2>
                                 </a>
                                 <br>
 
